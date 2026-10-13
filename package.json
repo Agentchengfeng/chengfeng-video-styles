@@ -1,0 +1,40 @@
+{
+  "name": "chengfeng-video-styles",
+  "version": "0.1.0",
+  "description": "15 种代码视频风格 Skill：让 Claude Code / Codex 用纯代码做 10 秒知识讲解短片",
+  "license": "Apache-2.0",
+  "author": "成峰 / AI产品自由",
+  "bin": {
+    "chengfeng-video-styles": "bin/install.js",
+    "chengfeng-video-styles-cpm": "bin/install.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CITATION.cff",
+    "SKILL.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "codex",
+    "skill",
+    "ai-agent",
+    "motion-graphics",
+    "canvas",
+    "video"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agentchengfeng/chengfeng-video-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Agentchengfeng/chengfeng-video-styles/issues"
+  },
+  "homepage": "https://github.com/Agentchengfeng/chengfeng-video-styles#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
