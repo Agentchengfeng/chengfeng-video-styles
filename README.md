@@ -1,8 +1,8 @@
 # chengfeng-video-styles
 
-**一句话选风格，Agent 用纯代码做出 10 秒知识讲解短片。** 15 种现成风格，Claude Code / Codex 通用。
+**一句话选风格，Agent 用纯代码做出 10 秒知识讲解短片。** 16 种现成风格，Claude Code / Codex 通用。
 
-![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Version](https://img.shields.io/badge/version-0.1.0-green)
+![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Version](https://img.shields.io/badge/version-0.2.0-green)
 
 ![同一个主题“茶”，15 种风格各做一条](assets/preview-tea.jpg)
 
@@ -10,9 +10,9 @@
 
 ## 解决什么
 
-想做一条知识短视频，难的往往不是代码，而是“画面该长什么样”。这个 Skill 把 15 种已经验证过的风格写成了固定的画面写法和样片结构，你只要说“用 XX 风格讲 XX”，Agent 就照着写出一个可直接播放的 HTML。
+想做一条知识短视频，难的往往不是代码，而是“画面该长什么样”。这个 Skill 把 16 种已经验证过的风格写成了固定的画面写法和样片结构，你只要说“用 XX 风格讲 XX”，Agent 就照着写出一个可直接播放的 HTML。
 
-- **不用素材**：Canvas 2D / WebGL / three.js 纯代码，不生图、不找图。
+- **不用素材**：Canvas 2D / SVG / WebGL / three.js 纯代码，不生图、不找图。
 - **一个文件**：16:9 单 HTML，打开就播，循环 10 秒。
 - **逐帧可控**：画面只由时间 `t` 决定，同一个 `t` 永远是同一帧，方便截图和导出。
 - **讲得清楚**：10 秒一个知识点，一句标题 + 一句点破的结论，先列时间表再动手。
@@ -40,15 +40,16 @@ npx -y github:Agentchengfeng/chengfeng-video-styles doctor
 npx -y github:Agentchengfeng/chengfeng-video-styles uninstall
 ```
 
-## 15 种风格
+## 16 种风格
 
-| # | 风格 | # | 风格 | # | 风格 |
-|---|---|---|---|---|---|
-| 01 | 皮影戏 | 06 | 3D 拆解 | 11 | 数据信息图 |
-| 02 | 等距流程 | 07 | 像素典故 | 12 | 扁平 MG |
-| 03 | 比例尺对比 | 08 | 绘本科普 | 13 | 卡点金句 |
-| 04 | 白板手绘 | 09 | 数学可视化 | 14 | 漫画分格 |
-| 05 | 汉字演变 | 10 | 地图动画 | 15 | 时间线 |
+| # | 风格 | # | 风格 | # | 风格 | # | 风格 |
+|---|---|---|---|---|---|---|---|
+| 01 | 皮影戏 | 05 | 汉字演变 | 09 | 数学可视化 | 13 | 卡点金句 |
+| 02 | 等距流程 | 06 | 3D 拆解 | 10 | 地图动画 | 14 | 漫画分格 |
+| 03 | 比例尺对比 | 07 | 像素典故 | 11 | 数据信息图 | 15 | 时间线 |
+| 04 | 白板手绘 | 08 | 绘本科普 | 12 | 扁平 MG | 16 | 小黑手绘 |
+
+16 小黑手绘关联 [chengfeng-videocut-xiaohei](https://github.com/Agentchengfeng/chengfeng-videocut-xiaohei)，画法以那边为准，需要另外安装。
 
 每种风格的画面写法和样片内容见 [`skills/chengfeng-video-styles/SKILL.md`](skills/chengfeng-video-styles/SKILL.md)。
 
