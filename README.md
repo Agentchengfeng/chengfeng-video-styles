@@ -1,8 +1,8 @@
 # chengfeng-video-styles
 
-**一句话选风格，Agent 用纯代码做出 10 秒知识讲解短片。** 16 种现成风格，Claude Code / Codex 通用。
+**把你自己的内容交给 Agent，16 种风格各出一个 3 秒样片，挑一个，再用纯代码做成 10 秒知识讲解短片。** 16 种现成风格，Claude Code / Codex 通用。
 
-![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Version](https://img.shields.io/badge/version-0.2.0-green)
+![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Version](https://img.shields.io/badge/version-0.3.0-green)
 
 ![同一个主题“茶”，15 种风格各做一条](assets/preview-tea.jpg)
 
@@ -10,12 +10,14 @@
 
 ## 解决什么
 
-想做一条知识短视频，难的往往不是代码，而是“画面该长什么样”。这个 Skill 把 16 种已经验证过的风格写成了固定的画面写法和样片结构，你只要说“用 XX 风格讲 XX”，Agent 就照着写出一个可直接播放的 HTML。
+想做一条知识短视频，难的往往不是代码，而是“画面该长什么样”。这个 Skill 把 16 种已经验证过的风格写成了固定的画面写法和样片结构。你把自己的文案、口播稿或文章段落交给 Agent，它先把 16 种风格各做一个约 3 秒的样片，放进一个筛选页（你投喂了参考，参考也算一种风格，一起做一个放进来），你挑中一个，它再照着做出可直接播放的 HTML。
 
 - **不用素材**：Canvas 2D / SVG / WebGL / three.js 纯代码，不生图、不找图。
 - **一个文件**：16:9 单 HTML，打开就播，循环 10 秒。
 - **逐帧可控**：画面只由时间 `t` 决定，同一个 `t` 永远是同一帧，方便截图和导出。
-- **讲得清楚**：10 秒一个知识点，一句标题 + 一句点破的结论，先列时间表再动手。
+- **先挑后做**：3 秒样片放在同一页循环播放，点选、放大、复制“我选 03”发回给 Agent，选定再做全片。样片这步不省，免得全片跑完、额度用完，效果却不满意。
+- **参考一起出**：风格不用自己选，16 种都出样片；手上有合适的视频或截图就一起投喂，参考也算一种风格，同样出一个样片，和现成风格放在同一页挑。
+- **讲得清楚**：10 秒一个知识点，一句标题 + 一句点破的结论。
 
 ## 快速开始
 
@@ -28,8 +30,8 @@ npx -y github:Agentchengfeng/chengfeng-video-styles install
 然后新开一个 Claude Code 或 Codex 会话，直接说：
 
 ```text
+把下面这段话做成视频：……（贴上你自己的文案）
 用皮影戏风格讲曹冲称象
-用时间线风格讲人工智能的发展
 有哪些视频风格？
 ```
 
@@ -64,7 +66,9 @@ npx -y github:Agentchengfeng/chengfeng-video-styles uninstall
 
 ```text
 chengfeng-video-styles/
-├── skills/chengfeng-video-styles/SKILL.md   # Skill 本体，只有这一个文件
+├── skills/chengfeng-video-styles/
+│   ├── SKILL.md                             # Skill 本体
+│   └── 样片筛选.html                         # 样片筛选页模板
 ├── bin/install.js                           # 安装 / doctor / 卸载
 ├── assets/preview-tea.jpg                   # README 预览图
 ├── LICENSE  NOTICE.md  CITATION.cff
